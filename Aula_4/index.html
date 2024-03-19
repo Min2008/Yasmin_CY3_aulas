@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="verificar.php" method="post">
+        <div>
+            <h1>Cadastro Clientes</h1>
+        </div>
+        <div class="conteiner-nome-sobrenome">
+            <div class="conteiner-nome">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome">
+            </div>
+            <div class="conteiner-sobrenome">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome">
+            </div>
+        </div>
+        <div class="conteiner-identificacao">
+            <div class="conteiner-email">
+                <label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="conteiner-fone">
+                <label for="fone">Telefone</label>
+                <input type="number" name="fone">
+            </div>
+        </div>
+        <div class="conteiner-pessoais">
+            <div class="conteiner-genero">
+                <label for="genero">Gênero</label>
+                <div class="conteiner-generos">
+                    <input type="checkbox" name="female">
+                    <label for="female">Female</label>
+
+                    <input type="checkbox" name="male">
+                    <label for="male">Male</label>
+                </div>
+            </div>
+            <div class="conteiner-senha">
+                <label for="senha">Confirme senha</label>
+                <input type="number" name="senha">
+            </div>
+
+        </div>
+        <div class="conteiner-localizacao">
+            <div class="conteiner-tipo">
+                <label for="tipo">Tipo</label>
+                <input type="text" name="tipo">   
+            </div>
+            <div class="conteiner-logradouro">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro">
+            </div>
+            <div class="conteiner-numero">
+                <label for="numero">N°</label>
+                <input type="number" name="numero">
+            </div>
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+</body>
+</html>
