@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@600&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: black;
+}
+    
+
+
+table {
+    text-align: center;
+    width: 100%;
+}
+
+th {
+    background-color: rgb(179, 143, 247);
+    height: 50px;
+    size: 50px;
+}
+
+td {
+    background-color: rgb(223, 223, 223);
+    border-bottom: 1px solid;
+    height: 30px;
+}
