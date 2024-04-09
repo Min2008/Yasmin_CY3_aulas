@@ -11,6 +11,7 @@ $resultado = $mysqli->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Produtos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
@@ -33,7 +34,7 @@ $resultado = $mysqli->query($sql);
                     echo '<td>'. $rows['nome'] . '</td>';
                     echo '<td>'. $rows['valor'] . '</td>';
                     echo '<td>'. $rows['quantidade'] . '</td>';
-                    echo '<td> <a href= "editar_produto.php?id='. $rows['id'] . '">Editar</a> | <a href= "deletar_produto.php?id='. $rows['id'] . '">Deletar</a>';
+                    echo '<td> <a href= "editar_produtos.php?id='. $rows['id'] . '">Editar</a> | <a href= "deletar_produto.php?id='. $rows['id'] . '">Deletar</a>';
                     echo '</tr>';
                 }
             }
