@@ -1,20 +1,33 @@
-<?php
-include ('./conexoes/conection.php');
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") 
-{
-    $desejo = $_POST['desejo'];
-    $img = $_POST['img'];
-    $quantidade = $_POST['quantidade'];
-
-    $sql = "INSERT INTO lista desejos (desejo, imagem, quantidade) VALUES (NULL,'$desejo', '$img', '$quantidade')";
-
-    if($mysqli->query($sql) === TRUE)
-    {
-        
-    }
-}
-
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Produtos</title>
+</head>
+<body>
+    <div>
+        <h1>Seus Desejos</h1>
+        <form action="adicionar_desejos.php" method="post">
+            <div>
+                <label for="produto">Nome</label>
+                <input type="text" name="produto" id="produto">
+            </div>
+            <div>
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="quantidade" id="quantidade">
+            </div>
+            <div>
+                <label for="img">Imagem</label>
+                <input type="imagem" name="img" id="img">
+            </div>
+            <div>
+                <button type="submit">Adicionar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
 
 
