@@ -1,5 +1,5 @@
 <?php
-include ('../conexoes/conexao.php');
+include ('./conexoes/conection.php');
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") 
 {
