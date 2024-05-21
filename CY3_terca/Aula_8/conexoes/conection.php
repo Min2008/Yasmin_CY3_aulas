@@ -48,5 +48,4 @@ if (!$tabela_produtos_existe) {
         echo 'Erro ao criar a tabela produtos' . $mysqli->error . "\n";
     }
 }
-// fechar conexão
-$mysqli->close();
+

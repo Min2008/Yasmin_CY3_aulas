@@ -3,6 +3,7 @@ include('../conexoes/conexao.php');
 
 $sql = 'SELECT * FROM produtos';
 $resultado = $mysqli->query($sql);
+
 ?>
 
 <!DOCTYPE html>

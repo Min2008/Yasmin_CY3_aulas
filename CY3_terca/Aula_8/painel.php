@@ -1,17 +1,16 @@
 <?php 
+include('./conexoes/conection.php');
 session_start();
 
 $email = $_SESSION['email'];
-$painel = $_SESSION['painel'];
+$sql = "SELECT * FROM produtos";
+$total = $mysqli->query($sql);
+if (empty($total)) 
+{
+    header('Location: form_add.php');
 
-    if (empty($painel)) 
-    {
-        header('Location: form_add.php');
+} 
 
-    } else {
-
-        header('Location: painel.php');
-    }
 ?>
 
 <!DOCTYPE html>
