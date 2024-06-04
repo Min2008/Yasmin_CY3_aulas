@@ -11,7 +11,7 @@
 
 body { 
     background-color: #1f4c65;
-    display: flex;
+    background-image: linear-gradient(173deg, #1f4c65 30%, #d0808e 100%);     
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -27,32 +27,42 @@ h1 {
     justify-content: center;
 }
 
-form {
-    background-color: #021018ca;
-    font-size: 25px;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    flex-direction: column;
-
-    border-radius: 10px;
-    box-shadow: 3px 5px 8px #1f4c65;
+table {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
 }
+
+th {
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    
+}
+
+td {
+    padding: 15px;
+    margin: 10px;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
 
 div {
     margin: 30px;
 }
 
-button {
-    padding: 8px;
-    margin: 5px;
-    width: 45%;
-    border-radius: 5px;
-    border: none;
-    font-size: 18px;
-    background-color: rgb(216, 216, 216);
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-button:hover {
-    background-color: #658da26c;;
+a:hover {
+
+    color: #d0808e;
 }

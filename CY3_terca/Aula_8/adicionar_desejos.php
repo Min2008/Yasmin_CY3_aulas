@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $quantidade = $_POST['quantidade'];
     $img = $_POST['img'];
 
-    $sql = "INSERT INTO produtos (nome_produto, id_user, quantidade, img) VALUES ('$produto', '$id', '$quantidade', '$img')";
+    $sql = "INSERT INTO produtos (nome, id_user, quantidade, img) VALUES ('$produto', '$id', '$quantidade', '$img')";
 
     if ($mysqli->query($sql) == TRUE) {
 

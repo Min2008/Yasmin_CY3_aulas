@@ -1,0 +1,22 @@
+<?php
+include('../conexoes/conexao.php');
+
+if(isset($_GET['id']))
+{
+    $id = $_GET['id'];
+
+    $sql = "DELETE FROM produtos WHERE id='$id'";
+
+    if($mysqli->query($sql) === TRUE)
+    {
+        header('Location: painel.php');
+        exit();
+    }
+    else {
+        echo 'Deu ruim, porque?' . $mysqli->error;
+    }
+}
+
+$mysqli->close();
+
+?>
