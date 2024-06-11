@@ -8,9 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $produto = $_POST['produto'];
     $id = $_SESSION['id_user'];
     $quantidade = $_POST['quantidade'];
-    $img = $_POST['img'];
 
-    $sql = "INSERT INTO produtos (nome, id_user, quantidade, img) VALUES ('$produto', '$id', '$quantidade', '$img')";
+    $sql = "INSERT INTO produtos (id, nome_produto, id_user, quantidade) VALUES (NULL,'$produto', '$id', '$quantidade')";
 
     if ($mysqli->query($sql) == TRUE) {
 

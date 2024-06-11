@@ -10,7 +10,8 @@
 }
 
 body { 
-    background-image: linear-gradient(rgb(0, 203, 218), rgba(255, 190, 201, 0.557), rgba(224, 224, 38, 0.733)) ;
+    background-color: #1f4c65;
+    background-image: linear-gradient(136deg, #1f4c65 0%, #d0808e 50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,13 +39,25 @@ form {
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.854);
 }
 
+h1{
+    color: white;
+}
+
 div {
     margin: 20px;
+}
+
+form div input{
+    /* flex: grid;
+    grid-template-columns: 1fr 1fr; */
+    width: 100%;
+    border-radius: 5px;
 }
 
 button {
     padding: 10px;
     margin: 5px;
+
     width: 45%;
     border-radius: 5px;
     border: none;

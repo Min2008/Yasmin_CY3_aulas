@@ -5,13 +5,13 @@ if(isset($_GET['id']))
 {
     $id = $_GET['id'];
 
-    $sql = "SELECT nome, quantidade FROM produtos WHERE id='$id'";
+    $sql = "SELECT nome_produto, quantidade FROM produtos WHERE id='$id'";
     $total = $mysqli->query($sql);
 
     if($total->num_rows > 0) 
     {
         $modificacao = $total->fetch_array();
-        $nome = $modificacao['nome'];
+        $nome = $modificacao['nome_produto'];
         $quantidade = $modificacao['quantidade'];
         // $img = $modificacao['img'];
     }
@@ -24,10 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $id = $_POST['id'];
     $nome = $_POST['nome'];
-    // $img = $_POST['img'];
     $quantidade = $_POST['quantidade'];
 
-    $sql = "UPDATE produtos SET nome='$nome', quantidade='$quantidade' WHERE id='$id'";
+    $sql = "UPDATE produtos SET nome_produto='$nome', quantidade='$quantidade' WHERE id='$id'";
 
     if($mysqli->query($sql) === TRUE)
     {
@@ -48,6 +47,7 @@ $mysqli->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/form.css">
     <title>Editar Desejo</title>
     <link rel="stylesheet" href="style.css">
 </head>

@@ -5,7 +5,8 @@ session_start();
 $email = $_SESSION['email'];
 $sql = "SELECT * FROM produtos";
 $total = $mysqli->query($sql);
-if (empty($total)) 
+
+if ($total->num_rows<=0) 
 {
     header('Location: form_add.php');
 
@@ -42,7 +43,7 @@ if (empty($total))
                     {
                         echo '<tr>';
                         echo '<td>'. $rows['id'] . '</td>';
-                        echo '<td>'. $rows['nome'] . '</td>';
+                        echo '<td>'. $rows['nome_produto'] . '</td>';
                         echo '<td>'. $rows['quantidade'] . '</td>';
                         // echo '<td>'. $rows['imagem'] . '</td>';
                         echo '<td> <a href= "editar_desejos.php?id='. $rows['id'] . '">Editar</a> | <a href= "deletar_desejos.php?id='. $rows['id'] . '">Deletar</a>';
@@ -55,8 +56,11 @@ if (empty($total))
                 
                 ?>
             </table>
-            <p>
+            <p class="logout">
                 <a href="logout.php">Sair</a>
+            </p>
+            <p class="adicionar">
+                <a href="form_add.php">Adicionar</a>
             </p>
         </div>
     </div>

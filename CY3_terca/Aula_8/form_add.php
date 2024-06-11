@@ -19,10 +19,6 @@
                 <input type="number" name="quantidade" id="quantidade">
             </div>
             <div>
-                <label for="img">Imagem</label>
-                <input type="imagem" name="img" id="img">
-            </div>
-            <div>
                 <button type="submit">Adicionar</button>
                 <button type="reset">Limpar</button>
             </div>

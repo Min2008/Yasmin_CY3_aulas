@@ -19,7 +19,7 @@ else
         $index_pass_email = $_POST['pass'];
 
         // QUERY PARA TRAZER O USUÁRIO E SENHA CORRETOS
-        $sql_code = "SELECT * FROM users WHERE user = '$index_name_email' AND password = '$index_pass_email'";
+        $sql_code = "SELECT * FROM users WHERE user = '$index_name_email' AND senha = '$index_pass_email'";
 
         // EXECUTANDO QUERY
         $sql_query = $mysqli->query($sql_code);
